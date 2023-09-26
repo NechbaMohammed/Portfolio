@@ -8,7 +8,10 @@ import editor from "../../Assets/Projects/codeEditor.png";
 import chatify from "../../Assets/Projects/chatify.png";
 import suicide from "../../Assets/Projects/suicide.png";
 import bitsOfCode from "../../Assets/Projects/blog.png";
-
+import texts from "../../Assets/Projects/texts.png";
+import abstract from "../../Assets/Projects/abstract.jpg";
+import ml from "../../Assets/Projects/ml.png";
+import opt from "../../Assets/Projects/opt.png";
 function Projects() {
   return (
     <Container fluid className="project-section">
@@ -21,71 +24,72 @@ function Projects() {
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+        <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={editor}
+              isBlog={false}
+              title="Factoid-Question-Answering-System"
+              description="Factoid Question Answering System - An advanced Open-domain Question Answering (ODQA) initiative designed to automatically respond to factual questions in both Arabic and English languages through the utilization of Natural Language Processing (NLP) and machine learning methodologies."
+              ghLink="https://github.com/NechbaMohammed/Factoid-Question-Answering-System"
+                           
+            />
+          </Col>
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={chatify}
+              imgPath={bitsOfCode}
+              isBlog={false}
+              title="Accelerated Logistic Regression Package for High-Performance Computing"
+              description="This package that offers efficient implementations of logistic regression using high-performance computing techniques, with support for both CPU and GPU architectures. The algorithms are implemented in Python 3.8, and the GPU utilization is enhanced through CUDA programming, significantly accelerating the training process."
+              ghLink="https://github.com/NechbaMohammed/SwiftLogisticReg"
+             
+            />
+          </Col>
+
+
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={opt}
+              isBlog={false}
+              title="OptiNumPy - Numerical Analysis Optimization Package"
+              description="OptiNumPy is an open-source Python library designed to streamline and enhance numerical optimization tasks. Built on top of NumPy, it provides a wide range of optimization algorithms and tools, making it easier for data scientists, engineers, and researchers to solve complex optimization problems efficiently."
+              ghLink="https://github.com/NechbaMohammed/OptiNumPy"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={ml}
               isBlog={false}
               title="ML from scratch with Python"
               description="This project involves implementing various machine learning algorithms from scratch using the Python programming language. The algorithms that can be included are Pocket, Perceptron, Linear Regression, Adaline, Logistic Regression, Polynomial Regression, One-vs-All and One-vs-One Classifiers. Additionally, the project could involve using various libraries in Python such as NumPy, Pandas, and Matplotlib for data manipulation, analysis, and visualization."
               ghLink="https://github.com/NechbaMohammed/ML-from-scratch-with-Python"
             />
           </Col>
+          
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={bitsOfCode}
+              imgPath={abstract}
               isBlog={false}
-              title="Numerical Analysis Optimization Package"
-              description="The project consists of two main parts: one-dimensional function minimization algorithms and multi-dimensional function minimization algorithms. For one-dimensional function minimization, the project includes implementations of searching with elimination and interpolation methods. For system of equations and decompositions, the project focuses on solving systems of linear equations using Gaussian elimination, LU decomposition, and QR decomposition. For multi-dimensional function minimization, the project includes implementations of gradient descent, conjugate gradient, Newton's method, and quasi-Newton methods. Overall, the project provides a comprehensive understanding of numerical optimization methods and how they can be implemented using Python."
-              ghLink="https://github.com/NechbaMohammed/Numerical_Analysis_Optimization_Package"
-             
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={editor}
-              isBlog={false}
-              title="House Prices - Advanced Regression Techniques"
-              description="This project focuses on predicting housing prices using advanced regression techniques. The project is based on a dataset containing numerous features of residential homes in Ames, Iowa. The goal of the project is to build a regression model that accurately predicts the sale price of a given home based on its features. Additionally, the project may involve other techniques such as cross-validation and ensemble learning to improve the accuracy and robustness of the model. The final deliverable will be a trained regression model that can predict the sale price of a residential home based on its features with high accuracy."
-              kaggleLink="https://www.kaggle.com/code/nechbamohammed/stacked-regressions-top-11-on-leaderboard"
+              title="Abstract Clustering for Scientific Paper Insights"
+              description="This project's core aim is to use unsupervised machine learning to cluster scientific papers based on their abstracts, simplifying the discovery of related research and fostering a better understanding of research trends. "
+              ghLink="https://www.kaggle.com/code/nechbamohammed/abstract-clustering-for-scientific-paper-insights"
                            
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={leaf}
+              imgPath={texts}
               isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
+              title="NLP for text simplification and definition generation"
+              description="The SimpleText project aims to use AI to enhance public access and comprehension of scientific research by automatically creating simple definitions for complex concepts found in academic abstracts."
+              ghLink="https://www.kaggle.com/code/nechbamohammed/text-simplification"
+              
             />
           </Col>
 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={suicide}
-              isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={emotion}
-              isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
-            />
-          </Col>
+          
         </Row>
       </Container>
     </Container>

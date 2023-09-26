@@ -94,7 +94,7 @@ function NavBar() {
 
             <Nav.Item>
               <Nav.Link
-                href="https://medium.com/@mohammednechba"
+                href="https://www.researchgate.net/profile/Mohammed-Nechba/publications"
                 target="_blank"
                 rel="noreferrer"
               >
